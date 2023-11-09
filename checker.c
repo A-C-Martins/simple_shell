@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * start_repl - open a READ-EVALUATE-PRINT-LOOP with interpreter
- * @shell: double pointer back to the interpreter
+ * start_repl - Open a READ-EVALUATE-PRINT-LOOP with the interpreter.
+ * @shell: Double pointer back to the interpreter.
  *
- * Return: void (for now)
+ * Return: void (for now).
  */
 void start_repl(terminal_shell *shell)
 {
@@ -21,8 +21,8 @@ void start_repl(terminal_shell *shell)
 }
 
 /**
- * read_script - read a script as piped in from stdin
- * @shell: douple pointer back to the interprert
+ * scan_script - Read a script piped in from stdin.
+ * @shell: Double pointer back to the interpreter.
  *
  * Return: void.
  */
@@ -31,17 +31,40 @@ void scan_script(terminal_shell *shell)
 	char *current_line = NULL;
 
 	do {
-
 		current_line = putsIn();
 
 		if (current_line != NULL)
 			parse_line(shell, current_line);
 		else
-			(shell->isActive) = FALSE;
+			shell->isActive = FALSE;
 
 		free(current_line);
 		fflush(NULL);
 
 	} while (shell->isActive == TRUE);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
