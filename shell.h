@@ -67,7 +67,7 @@ void free_array(char **an_array);
 void start_repl(terminal_shell *shell);
 void scan_script(terminal_shell *shell);
 
-void prompt_1();
+void prompt_1(void);
 int is_null(char *str);
 char *putsIn();
 int num_of_spaces(char *string, char *delimiter);

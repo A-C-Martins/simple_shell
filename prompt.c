@@ -4,7 +4,7 @@
  * prompt_1 - prompt to shell
  */
 
-void prompt_1()
+void prompt_1(void)
 {
 	char c;
 
@@ -15,7 +15,8 @@ void prompt_1()
 
 /**
  * putsIn - takes in userinput
- * Return user input
+ *
+ * Return:ser input
  */
 
 char *putsIn()
@@ -47,6 +48,12 @@ char *putsIn()
 	}
 	return (buffer);
 }
+
+/**
+ * is_null - Checks if a string contains only spaces
+ * @str: The string to check
+ * Return: 1 if the string is only spaces, 0 otherwise
+ */
 
 int is_null(char *str)
 {
